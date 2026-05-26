@@ -21,8 +21,9 @@ assets/
 
 ## Updating
 
+- **Repo URLs:** the top of `index.html` has a block listing every repo URL the page links to. To update, just find the URL in the file and change it (or rename the GitHub repo to match).
 - **Add a news item:** edit the `<section class="news">` block in `index.html`.
-- **Add a project:** copy the `<article class="project">` block and adjust. Drop the figure/gif under `assets/projects/`.
+- **Add a project:** copy an `<article class="project">` block and adjust. Drop the figure/gif under `assets/projects/`.
 - **Update CV:** replace `assets/Faissal_IZERMINE_CV.pdf`.
 - **Tweak colors:** the palette lives in the `:root` block at the top of `style.css`.
 

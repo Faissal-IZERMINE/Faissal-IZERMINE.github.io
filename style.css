@@ -326,6 +326,39 @@ a:hover { color: var(--link-hover); border-bottom-color: currentColor; }
   letter-spacing: 0.02em;
 }
 
+/* ---------- "also" / smaller learning projects ---------- */
+.subsection-title {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  margin: 3rem 0 1rem;
+}
+.also {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--rule);
+}
+.also li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.also h4 {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.3rem;
+}
+.also p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--fg-muted);
+}
+.also p a { color: var(--accent); border-bottom-color: rgba(122, 31, 35, 0.3); }
+
 /* ---------- timeline ---------- */
 .timeline {
   display: grid;
