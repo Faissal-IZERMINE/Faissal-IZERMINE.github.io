@@ -19,7 +19,7 @@
   --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --mono:  "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
 
-  --maxw: 760px;
+  --maxw: 820px;
   --gutter: 1.5rem;
 }
 
@@ -127,7 +127,7 @@ a:hover { color: var(--link-hover); border-bottom-color: currentColor; }
   border-bottom: 1px solid var(--rule);
 }
 
-.block { margin: 4rem 0; }
+.block { margin: 4.5rem 0; }
 .block__lede {
   color: var(--fg-muted);
   font-size: 0.98rem;
@@ -225,12 +225,12 @@ a:hover { color: var(--link-hover); border-bottom-color: currentColor; }
 /* ---------- projects ---------- */
 .project {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 1.75rem;
-  padding: 1.75rem 0;
+  grid-template-columns: 230px 1fr;
+  gap: 2rem;
+  padding: 2.25rem 0;
   border-bottom: 1px solid var(--rule);
 }
-.project:first-of-type { padding-top: 0.5rem; }
+.project:first-of-type { padding-top: 1rem; }
 .project:last-of-type { border-bottom: none; }
 
 .project__media {
