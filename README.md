@@ -1,4 +1,4 @@
-# Faissal-Izermine.github.io
+# Faissal-IZERMINE.github.io
 # Faissal IZERMINE
 📍 Paris, France  
 📧 firstnamefamilyname[3][at]gmail[dot]com
