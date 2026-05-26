@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Faissal Izermine — Research</title>
+  <meta name="description" content="Faissal Izermine — Master MVA (ENS Paris-Saclay) and École des Ponts. Research on generative models, optimal transport, and reasoning in language models." />
+  <meta name="author" content="Faissal Izermine" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Faissal Izermine — Research" />
+  <meta property="og:description" content="ML research student working on diffusion / flow models, optimal transport, and reasoning LLMs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/picture_web.jpg" />
+
+  <link rel="icon" type="image/jpeg" href="assets/img/picture_web.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="topnav">
+    <a class="topnav__brand" href="#top">Faissal Izermine</a>
+    <div class="topnav__links">
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#cv">CV</a>
+    </div>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">●</button>
+  </nav>
+
+  <main id="top" class="container">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <img class="hero__photo" src="assets/img/picture_web.jpg" alt="Portrait of Faissal Izermine" />
+      <div class="hero__text">
+        <h1>Faissal Izermine</h1>
+        <p class="hero__tag">
+          Research intern, <a href="https://is.mpg.de/" target="_blank" rel="noopener">Max Planck Institute for Intelligent Systems</a>.<br />
+          M.Sc. student in the <a href="https://www.master-mva.com/" target="_blank" rel="noopener">MVA</a> program at ENS Paris-Saclay,
+          engineering degree at <a href="https://www.enpc.fr/en" target="_blank" rel="noopener">École des Ponts</a>.
+        </p>
+        <p class="hero__bio">
+          I work on <em>generative modeling</em> and <em>reasoning in language models</em>.
+          My current interests are flow / diffusion models, optimal transport, and reinforcement
+          learning for LLM reasoning &mdash; in particular, how continuous generative frameworks
+          can accelerate sampling and improve reasoning beyond next-token prediction.
+        </p>
+        <ul class="hero__links">
+          <li>📍 Paris, France &middot; Tübingen, Germany</li>
+          <li>
+            <a href="mailto:faissalizermine3@gmail.com">faissalizermine3@gmail.com</a>
+            &middot;
+            <a href="https://www.linkedin.com/in/izermine-faissal/" target="_blank" rel="noopener">LinkedIn</a>
+            &middot;
+            <a href="https://github.com/IZ-f-AI-ss3" target="_blank" rel="noopener">GitHub</a>
+            &middot;
+            <a href="assets/Faissal_IZERMINE_CV.pdf">CV (PDF)</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ============ NEWS ============ -->
+    <section class="news" aria-label="News">
+      <h2 class="section-title">News</h2>
+      <ul class="news__list">
+        <li><span class="news__date">Apr 2026</span> Started a research internship at the <strong>Max Planck Institute for Intelligent Systems</strong>, Tübingen — working on <em>Flow Maps</em> for few-step generation and reasoning in language models.</li>
+        <li><span class="news__date">Mar 2026</span> Finished an MVA project on the <em>Diffusion Schrödinger Bridge</em> for unpaired data translation.</li>
+        <li><span class="news__date">Jan 2026</span> MVA project on <em>denoising in score-based generative models</em> wrapped up — full <a href="assets/projects/denoising_report.pdf">report (PDF)</a>.</li>
+        <li><span class="news__date">Sept 2025</span> Started the <strong>MVA</strong> Master at ENS Paris-Saclay.</li>
+        <li><span class="news__date">Sept 2025</span> Finished my research internship in the <strong>Falcon Reasoning</strong> team at TII Abu Dhabi — work on entropy-rewarded policy optimization (<a href="assets/projects/serpo_paper.pdf">draft PDF</a>).</li>
+      </ul>
+    </section>
+
+    <!-- ============ RESEARCH INTERESTS ============ -->
+    <section id="research" class="block">
+      <h2 class="section-title">Research interests</h2>
+      <div class="interests">
+        <div class="interest">
+          <h3>Generative models</h3>
+          <p>Score-based diffusion, flow matching, flow maps; sampling efficiency, training stability and the discretization bias of Langevin-type samplers.</p>
+        </div>
+        <div class="interest">
+          <h3>Optimal transport</h3>
+          <p>Schrödinger bridges and stochastic OT for unpaired data translation; connections to diffusion-based generative models.</p>
+        </div>
+        <div class="interest">
+          <h3>Reasoning in LLMs</h3>
+          <p>Reinforcement learning at the right granularity (token, sentence, group), entropy-shaped objectives, and test-time compute via verification.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="block">
+      <h2 class="section-title">Selected research &amp; projects</h2>
+      <p class="block__lede">A curated subset of recent work, mostly from the MVA Master, the École des Ponts engineering cycle, and research internships. Code and writeups linked where available.</p>
+
+      <!-- SERPO -->
+      <article class="project">
+        <div class="project__media">
+          <img src="assets/projects/serpo_results.png" alt="SERPO results on AIME-24" loading="lazy" />
+        </div>
+        <div class="project__body">
+          <div class="project__head">
+            <h3>SERPO — Sentence-level Entropy-Rewarded Policy Optimization</h3>
+            <span class="project__date">2025</span>
+          </div>
+          <p class="project__where">Research internship · Falcon Reasoning team, Technology Innovation Institute (Abu Dhabi).</p>
+          <p>
+            GRPO assigns the same advantage to every token of a chain-of-thought.
+            <strong>SERPO</strong> introduces a sentence-granularity advantage bonus driven
+            by step entropy: low-entropy sentences (filler) are discouraged, high-entropy
+            reasoning steps are rewarded. The method preserves the GRPO update dynamics while
+            matching the natural step structure of distilled reasoning models like
+            DeepSeek-R1-Distill-Qwen.
+          </p>
+          <ul class="tags">
+            <li>RL for reasoning</li><li>GRPO / DAPO</li><li>Entropy shaping</li><li>verl / Megatron</li>
+          </ul>
+          <p class="project__links">
+            <a href="assets/projects/serpo_paper.pdf">Paper (PDF)</a> ·
+            <a href="https://github.com/IZ-f-AI-ss3/ERPO-Skywork-OR-1" target="_blank" rel="noopener">Code</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Half-denoising -->
+      <article class="project">
+        <div class="project__media">
+          <img src="assets/projects/denoising_celeba.gif" alt="Half-denoising sampling on CelebA" loading="lazy" />
+        </div>
+        <div class="project__body">
+          <div class="project__head">
+            <h3>Half-denoising in score-based generative models</h3>
+            <span class="project__date">2025–26</span>
+          </div>
+          <p class="project__where">MVA · Probabilistic Graphical Models project, ENS Paris-Saclay.</p>
+          <p>
+            Annealed Langevin Dynamics suffers from a discretization bias that grows with
+            the noise level. Building on Hyvärinen's <em>half-denoising</em> trick, we add
+            a small correction to the score step inside an NCSN sampler and benchmark on
+            MNIST, CIFAR-10 and CelebA. The modification recovers cleaner modes at high
+            noise without losing exploration.
+          </p>
+          <ul class="tags">
+            <li>Score-based diffusion</li><li>Langevin dynamics</li><li>NCSN</li><li>PyTorch</li>
+          </ul>
+          <p class="project__links">
+            <a href="assets/projects/denoising_report.pdf">Report (PDF)</a> ·
+            <a href="https://github.com/IZ-f-AI-ss3/Denoising_in_score_based_generative_models" target="_blank" rel="noopener">Code</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Schrödinger Bridge -->
+      <article class="project">
+        <div class="project__media project__media--text">
+          <span class="formula">d X<sub>t</sub> = b(X<sub>t</sub>, t) dt + σ dW<sub>t</sub></span>
+          <span class="formula-sub">Schrödinger bridge / entropic optimal transport</span>
+        </div>
+        <div class="project__body">
+          <div class="project__head">
+            <h3>Diffusion Schrödinger Bridge Matching</h3>
+            <span class="project__date">2025–26</span>
+          </div>
+          <p class="project__where">MVA · Deep Learning project, ENS Paris-Saclay.</p>
+          <p>
+            Re-implementation and study of De Bortoli's <em>Schrödinger Bridge Flow</em>
+            framework for unpaired data translation. We evaluate diffusion-based optimal
+            transport on small-scale image-to-image translation tasks and discuss the
+            trade-off between transport cost and sample quality.
+          </p>
+          <ul class="tags">
+            <li>Optimal transport</li><li>Diffusion</li><li>Unpaired translation</li>
+          </ul>
+          <p class="project__links">
+            <a href="https://github.com/IZ-f-AI-ss3/Shrodinger_bridge_DL_project" target="_blank" rel="noopener">Code</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Data Efficacy -->
+      <article class="project">
+        <div class="project__media">
+          <img src="assets/projects/data_efficacy_method.png" alt="Data efficacy method overview" loading="lazy" />
+        </div>
+        <div class="project__body">
+          <div class="project__head">
+            <h3>Data efficacy for LM training — re-implementation</h3>
+            <span class="project__date">2025</span>
+          </div>
+          <p class="project__where">Self-study · re-implementation of arXiv:2506.21545.</p>
+          <p>
+            Implementation of a proxy-model + Pontryagin Maximum Principle pipeline for
+            scoring pre-training data quality, then training a small data scorer to annotate
+            the full corpus. Built on top of fairseq and a 160M proxy LM, with multi-GPU
+            DeepSpeed training.
+          </p>
+          <ul class="tags">
+            <li>LLM pre-training</li><li>Optimal control</li><li>Data selection</li><li>DeepSpeed</li>
+          </ul>
+          <p class="project__links">
+            <a href="https://arxiv.org/abs/2506.21545" target="_blank" rel="noopener">Reference paper</a> ·
+            <a href="https://github.com/IZ-f-AI-ss3/Data-Efficacy-for-Language-Model-Training-Implementation" target="_blank" rel="noopener">Code</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Multi-Agent Verifiers -->
+      <article class="project">
+        <div class="project__media project__media--text">
+          <span class="formula">argmax<sub>y∈Y</sub>  Σ<sub>v∈V</sub>  v(y)</span>
+          <span class="formula-sub">Multi-verifier test-time scaling</span>
+        </div>
+        <div class="project__body">
+          <div class="project__head">
+            <h3>Multi-Agent Verifiers — local-model fork</h3>
+            <span class="project__date">2025</span>
+          </div>
+          <p class="project__where">Implementation of Lifshitz et al., arXiv:2502.20379.</p>
+          <p>
+            Fork of the Multi-Agent Verification framework, swapping API calls for a vLLM
+            backend so the full BoN + aspect-verifier ensemble runs on local GPUs across
+            AIME-25, MATH-500, MMLU-Pro, GPQA, HumanEval and SimpleQA.
+          </p>
+          <ul class="tags">
+            <li>Test-time scaling</li><li>Verification</li><li>vLLM</li><li>Math reasoning</li>
+          </ul>
+          <p class="project__links">
+            <a href="https://arxiv.org/abs/2502.20379" target="_blank" rel="noopener">Reference paper</a> ·
+            <a href="https://github.com/IZ-f-AI-ss3/MultiAgentVerifiers" target="_blank" rel="noopener">Code</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Classical NLP from scratch -->
+      <article class="project">
+        <div class="project__media project__media--text">
+          <span class="formula">Attention(Q,K,V) = softmax(QK<sup>⊤</sup>/√d) V</span>
+          <span class="formula-sub">From scratch in PyTorch</span>
+        </div>
+        <div class="project__body">
+          <div class="project__head">
+            <h3>Classical NLP architectures from scratch</h3>
+            <span class="project__date">2024–25</span>
+          </div>
+          <p class="project__where">Personal study series.</p>
+          <p>
+            Implementations of RNN/LSTM/GRU, the original Transformer, GPT-2,
+            Vision Transformers, the Differential Transformer, and Mamba (SSM) — each
+            paired with the corresponding paper. Built as a way of internalizing
+            modern architectures by re-deriving them from first principles.
+          </p>
+          <ul class="tags">
+            <li>Transformers</li><li>SSMs</li><li>PyTorch</li>
+          </ul>
+          <p class="project__links">
+            <a href="https://github.com/IZ-f-AI-ss3/Building_All_Classical_NLP_Models_from_Scratch" target="_blank" rel="noopener">Code</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- KIRO RTE -->
+      <article class="project">
+        <div class="project__media project__media--text">
+          <span class="formula">min<sub>π</sub> 𝔼[ C(π) ]</span>
+          <span class="formula-sub">Combinatorial optimization</span>
+        </div>
+        <div class="project__body">
+          <div class="project__head">
+            <h3>KIRO challenges — combinatorial optimization with simulated annealing</h3>
+            <span class="project__date">2023–24</span>
+          </div>
+          <p class="project__where">École des Ponts · with Renault (vehicle sequencing) and RTE (offshore wind grid).</p>
+          <p>
+            Two industrial optimization challenges solved with simulated annealing:
+            ordering vehicles between paint and assembly workshops at Renault to minimize
+            setup cost, and designing offshore wind-farm cabling for RTE to minimize total
+            infrastructure cost.
+          </p>
+          <ul class="tags">
+            <li>Simulated annealing</li><li>OR</li><li>Industrial OR</li>
+          </ul>
+          <p class="project__links">
+            <a href="https://github.com/IZ-f-AI-ss3/Optimizing-RENAULT-CARS-SEQUENCING-with-Simulated-anealing" target="_blank" rel="noopener">Renault code</a> ·
+            <a href="https://github.com/IZ-f-AI-ss3/Optimizing-RTE-Wind-Grid-with-Simulated-Anealing" target="_blank" rel="noopener">RTE code</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Fermi-Dirac -->
+      <article class="project">
+        <div class="project__media project__media--text">
+          <span class="formula">f(ε) = 1 / (1 + e<sup>(ε−μ)/kT</sup>)</span>
+          <span class="formula-sub">Sampled via Metropolis–Hastings</span>
+        </div>
+        <div class="project__body">
+          <div class="project__head">
+            <h3>Simulating Fermi–Dirac statistics via Metropolis–Hastings</h3>
+            <span class="project__date">2023</span>
+          </div>
+          <p class="project__where">École des Ponts · Discrete probability, algorithms and statistical physics.</p>
+          <p>
+            Research report on MCMC convergence properties for sampling fermion occupation
+            numbers, with a focus on the diagnostics that distinguish slow mixing from
+            insufficient burn-in on small lattices.
+          </p>
+          <ul class="tags">
+            <li>MCMC</li><li>Stat. physics</li><li>Convergence diagnostics</li>
+          </ul>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="block">
+      <h2 class="section-title">Experience</h2>
+
+      <article class="timeline">
+        <div class="timeline__when">Apr 2026 — present</div>
+        <div class="timeline__what">
+          <h3>Research intern · Max Planck Institute for Intelligent Systems</h3>
+          <p class="muted">Tübingen, Germany</p>
+          <p>Applying <em>Flow Maps</em>, a continuous generative framework, to few-step
+            generation and reasoning in language models.</p>
+        </div>
+      </article>
+
+      <article class="timeline">
+        <div class="timeline__when">Apr — Sept 2025</div>
+        <div class="timeline__what">
+          <h3>Research intern · Technology Innovation Institute — Falcon Reasoning team</h3>
+          <p class="muted">Abu Dhabi, UAE</p>
+          <p>Built RL training pipelines for LLM reasoning that fed directly into the
+            training stack of the Falcon Reasoning Model. Authored the SERPO draft on
+            sentence-level entropy-rewarded policy optimization.</p>
+        </div>
+      </article>
+
+      <article class="timeline">
+        <div class="timeline__when">Jul 2024 — Jan 2025</div>
+        <div class="timeline__what">
+          <h3>R&amp;D intern · Klark</h3>
+          <p class="muted">Bordeaux, France</p>
+          <p>Optimized Retrieval-Augmented Generation pipelines across 50+ CRM systems
+            by fine-tuning domain-specific reranking models and built NLP architectures
+            for automated text categorization.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section id="education" class="block">
+      <h2 class="section-title">Education</h2>
+
+      <article class="timeline">
+        <div class="timeline__when">2025 — present</div>
+        <div class="timeline__what">
+          <h3>M.Sc., Mathematics, Vision, Learning (MVA) — ENS Paris-Saclay</h3>
+          <p>Coursework: Probabilistic Models, Optimal Transport for ML, Reinforcement Learning,
+            Statistical Learning, Deep Learning, Stochastic Calculus in ML, Optimization.</p>
+        </div>
+      </article>
+
+      <article class="timeline">
+        <div class="timeline__when">2022 — present</div>
+        <div class="timeline__what">
+          <h3>Engineering degree — École des Ponts ParisTech</h3>
+          <p class="muted">Department of Mathematics &amp; Computer Science · Academic avg. 15.45 / 20</p>
+          <p>Highest academic distinction in Stochastic Processes (20/20), Optimal Control
+            (20/20), PDEs (20/20) and Probability (19.75/20). Deep Learning, Machine Learning
+            (PyTorch / JAX), Advanced Algorithms (C++/Python).</p>
+        </div>
+      </article>
+
+      <article class="timeline">
+        <div class="timeline__when">2020 — 2022</div>
+        <div class="timeline__what">
+          <h3>Classes préparatoires MPSI / MP* — Agadir, Morocco</h3>
+          <p>Two-year intensive program in Mathematics, Physics and Computer Science
+            preparing for the French <em>grandes écoles</em> entrance exams.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="block">
+      <h2 class="section-title">Skills &amp; languages</h2>
+      <div class="skills">
+        <div>
+          <h4>Programming</h4>
+          <p>Python · C++ · Julia · R · SQL · LaTeX</p>
+        </div>
+        <div>
+          <h4>ML stack</h4>
+          <p>PyTorch · JAX · DeepSpeed · vLLM · Ray · HuggingFace · Megatron-style parallelism</p>
+        </div>
+        <div>
+          <h4>Languages</h4>
+          <p>French (native) · English (fluent, TOEIC 795) · German (beginner)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CV ============ -->
+    <section id="cv" class="block cv">
+      <h2 class="section-title">CV &amp; contact</h2>
+      <p>
+        Full CV available as <a href="assets/Faissal_IZERMINE_CV.pdf">PDF</a>.
+        For research collaborations, internships, or to chat about diffusion / OT / LLM reasoning:
+        <a href="mailto:faissalizermine3@gmail.com">faissalizermine3@gmail.com</a>.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 Faissal Izermine · built by hand, hosted on GitHub Pages.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
