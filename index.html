@@ -445,6 +445,35 @@
         </div>
       </article>
 
+      <!-- 9b. CombiLatent (insert between the KIRO article and the Fermi–Dirac article) -->
+<article class="project">
+  <div class="project__media project__media--text">
+    <span class="formula">z → Sinkhorn(z) → π̂ ⟶ Hungarian ⟶ π*</span>
+    <span class="formula-sub">Latent relaxation of a discrete schedule</span>
+  </div>
+  <div class="project__body">
+    <div class="project__head">
+      <h3>CombiLatent — latent-space search for combinatorial scheduling</h3>
+      <span class="project__date">2026</span>
+    </div>
+    <p class="project__where">Workshop paper, ICML 2026 · joint work with five collaborators.</p>
+    <p>
+      A two-phase approach to permutation flow-shop scheduling. A Transformer surrogate is
+      trained to predict a candidate schedule's makespan, which embeds the discrete assignment
+      into a differentiable latent space; a Sinkhorn-regularised search then explores that
+      space, and a final Hungarian matching snaps the result back to a valid permutation. On
+      synthetic instances the method is competitive with classical constructive heuristics
+      (NEH, CDS, Palmer). The regularisation turned out to be load-bearing rather than
+      cosmetic &mdash; removing it collapses the search.
+    </p>
+    <ul class="tags">
+      <li>Combinatorial optimization</li><li>Optimal transport</li><li>Sinkhorn</li><li>Scheduling</li>
+    </ul>
+    <p class="project__links">
+      <a href="https://openreview.net/pdf?id=wBkHnFSDcD" target="_blank" rel="noopener">Paper (PDF)</a>
+    </p>
+  </div>
+</article>
       <!-- 10. Fermi-Dirac -->
       <article class="project">
         <div class="project__media project__media--text">
