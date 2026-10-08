@@ -42,6 +42,7 @@
   <nav class="topnav">
     <a class="topnav__brand" href="#top">Faissal Izermine</a>
     <div class="topnav__links">
+      <a href="#publications">Publications</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
       <a href="#research">Interests</a>
@@ -59,16 +60,18 @@
       <div class="hero__text">
         <h1>Faissal Izermine</h1>
         <p class="hero__tag">
-          Research intern at the <a href="https://is.mpg.de/" target="_blank" rel="noopener">Max Planck Institute for Intelligent Systems</a>, Tübingen.<br />
+          <!-- Research intern at the <a href="https://is.mpg.de/" target="_blank" rel="noopener">Max Planck Institute for Intelligent Systems</a>, Tübingen.<br /> -->
+          Research intern at the <a href="https://is.mpg.de/" ...>Max Planck Institute for Intelligent Systems</a>
+and the <a href="https://institute-tue.ellis.eu/" target="_blank" rel="noopener">ELLIS Institute Tübingen</a>.<br />
+          
           M.Sc. student in the <a href="https://www.master-mva.com/" target="_blank" rel="noopener">MVA</a> program at ENS Paris-Saclay
           and engineering student at <a href="https://www.enpc.fr/en" target="_blank" rel="noopener">École des Ponts</a>.
         </p>
         <p class="hero__bio">
           I am interested in <em>continuous generative models</em> and <em>reasoning in language models</em>,
-          and in the surprising amount of common ground between them. Most of my recent work sits at one
-          of two ends: the geometry of diffusion and flow-based samplers (score matching, Schrödinger bridges,
-          flow maps), and the design of reinforcement-learning objectives that shape <em>how</em> language
-          models reason &mdash; not just <em>whether</em> they get the answer right.
+          and in the surprising amount of common ground between them. Most of my recent work sits at one of two ends: the geometry of diffusion and flow-based
+samplers, and reinforcement-learning objectives that shape <em>how</em> language models reason.
+My current work brings the two together: flow language models as a substrate for reasoning.
         </p>
         <ul class="hero__links">
           <li>📍 Paris, France &middot; Tübingen, Germany</li>
@@ -83,6 +86,62 @@
       </div>
     </header>
 
+
+    <!-- ============ PUBLICATIONS ============ -->
+<section id="publications" class="block">
+  <h2 class="section-title">Preprints &amp; publications</h2>
+
+  <article class="timeline">
+    <div class="timeline__when">2026 · preprint</div>
+    <div class="timeline__what">
+      <h3><a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" rel="noopener">Unrolled Flow Models for Reasoning</a></h3>
+      <p class="muted"><strong>Faissal Izermine</strong>, Hanru Bai, Oscar Davis, T. Konstantin Rusch &middot; arXiv, 2026</p>
+      <p>Standard flow language models do not reason better when given more integration steps.
+        We show that a two-layer Transformer flow can solve graph reachability with a number of
+        Euler steps matching the graph distance, and introduce <em>Unrolled Flow Models</em>,
+        trained through their own latent rollout with a single terminal loss, so that accuracy
+        grows with the number of steps: 97% on ProsQA, and an 8.4M-parameter model outperforming
+        28.6M-parameter flow baselines on Sudoku-Extreme and Maze-Hard.</p>
+      <p class="project__links">
+        <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" rel="noopener">arXiv</a> ·
+        <a href="https://arxiv.org/pdf/XXXX.XXXXX" target="_blank" rel="noopener">PDF</a>
+      </p>
+    </div>
+  </article>
+
+  <article class="timeline">
+    <div class="timeline__when">2026 · COLM</div>
+    <div class="timeline__what">
+      <h3><a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" rel="noopener">Efficient Reasoning with Flow Language Models</a></h3>
+      <p class="muted">Hanru Bai, <strong>Faissal Izermine</strong>, Oscar Davis, T. Konstantin Rusch &middot; COLM 2026</p>
+      <p>A controlled comparison of continuous flow language models against discrete diffusion
+        at matched model sizes and denoising budgets, on maze planning and Sudoku. Continuous
+        states keep a superposition of candidate sequences that discrete states discard; we
+        characterise this theoretically and probe it empirically. On Maze15 the flow model
+        reaches 95% accuracy at 64 steps with 36.5% fewer parameters than the discrete baseline.</p>
+      <p class="project__links">
+        <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" rel="noopener">arXiv</a> ·
+        <a href="https://arxiv.org/pdf/XXXX.XXXXX" target="_blank" rel="noopener">PDF</a>
+      </p>
+    </div>
+  </article>
+
+  <article class="timeline">
+    <div class="timeline__when">2026 · ICML workshop</div>
+    <div class="timeline__what">
+      <h3><a href="https://openreview.net/pdf?id=wBkHnFSDcD" target="_blank" rel="noopener">CombiLatent: latent-space search for combinatorial scheduling</a></h3>
+      <p class="muted">AUTHOR LIST, with <strong>Faissal Izermine</strong> &middot; ICML 2026, WORKSHOP NAME</p>
+      <p>Permutation flow-shop scheduling in two phases: a Transformer surrogate embeds discrete
+        schedules into a differentiable latent space, a Sinkhorn-regularised search explores it,
+        and a Hungarian matching snaps the result back to a valid permutation. Competitive with
+        classical constructive heuristics (NEH, CDS, Palmer) on synthetic instances.</p>
+      <p class="project__links">
+        <a href="https://openreview.net/pdf?id=wBkHnFSDcD" target="_blank" rel="noopener">Paper (PDF)</a>
+      </p>
+    </div>
+  </article>
+</section>
+    
     <!-- ============ EXPERIENCE ============ -->
     <section id="experience" class="block">
       <h2 class="section-title">Experience</h2>
@@ -92,8 +151,10 @@
         <div class="timeline__what">
           <h3>Research intern · Max Planck Institute for Intelligent Systems</h3>
           <p class="muted">Tübingen, Germany</p>
-          <p>Investigating <em>Flow Maps</em> &mdash; a continuous generative framework &mdash; as a
-            route to few-step generation (more details to come...)</p>
+          <p>Working on continuous generative models for reasoning: how flow language models
+  compare with discrete diffusion at few denoising steps, and how to train them so that
+  additional integration steps actually help (<em>Unrolled Flow Models</em>).
+  Two papers, listed <a href="#publications">above</a>.</p>
         </div>
       </article>
 
@@ -173,7 +234,9 @@
         </div>
         <div class="interest">
           <h3>Reasoning in LLMs</h3>
-          <p>Reinforcement-learning objectives that act at the <em>right</em> granularity &mdash; token, sentence, or group &mdash; and test-time procedures (verification, self-consistency) that turn extra compute into better answers without retraining.</p>
+          <p>Reinforcement-learning objectives that act at the <em>right</em> granularity &mdash; token, sentence, or group &mdash; and test-time procedures (verification, self-consistency) that turn extra compute into better answers without retraining. More recently, whether iterative generative models can reason at all, and what training
+makes their steps build on one another.</p>
+          
         </div>
       </div>
     </section>
