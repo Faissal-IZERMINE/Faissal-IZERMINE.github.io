@@ -76,7 +76,7 @@ My current work brings the two together: flow language models as a substrate for
         <ul class="hero__links">
           <li>📍 Paris, France &middot; Tübingen, Germany</li>
           <li>
-            <a href="mailto:faissalizermine3@gmail.com">faissalizermine3@gmail.com</a>
+          <a href="#" class="js-email" data-u="faissalizermine3" data-d="gmail.com">Show email</a>           
             &middot;
             <a href="https://www.linkedin.com/in/izermine-faissal/" target="_blank" rel="noopener">LinkedIn</a>
             &middot;
@@ -609,7 +609,7 @@ makes their steps build on one another.</p>
       <h2 class="section-title">Contact</h2>
       <p>
         The fastest way to reach me is by email &mdash;
-        <a href="mailto:faissalizermine3@gmail.com">faissalizermine3@gmail.com</a>.
+<a href="#" class="js-email" data-u="faissalizermine3" data-d="gmail.com">Show email</a>
         I am always happy to talk about diffusion / flow models, optimal transport, or
         reasoning in LLMs, whether or not there is a concrete role attached.
       </p>
@@ -621,5 +621,17 @@ makes their steps build on one another.</p>
   </main>
 
   <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.js-email').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        if (el.dataset.done) return;
+        e.preventDefault();
+        var addr = el.dataset.u + '@' + el.dataset.d;
+        el.textContent = addr;
+        el.href = 'mailto:' + addr;
+        el.dataset.done = '1';
+      });
+    });
+  </script>
 </body>
 </html>
